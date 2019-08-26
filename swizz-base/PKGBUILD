@@ -1,0 +1,15 @@
+pkgname=swizz-base
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Base system configuration for Swizz systems"
+arch=("any")
+url="https://github.com/swizz/arch-repo"
+license=("ISC")
+depends=(
+    "git",
+    "networkmanager",
+    "ntp",
+    "pacaur",
+    "vim",
+    "zsh",
+)
