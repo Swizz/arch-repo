@@ -1,0 +1,31 @@
+pkgname=swizz-boot
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Bootable system configuration for Swizz systems"
+arch=("any")
+url="https://github.com/swizz/arch-repo"
+license=("ISC")
+sources=(
+    "boot/loader/arch.conf",
+    "boot/loader/loader.conf",
+    "etc/pacman/hooks/systemd-boot.hook",
+)
+sha1sum=(
+    "38a4c9042498bc8d9c9fc2740400718657a0f13f",
+    "c66ec70047d62933e4bd4a80ec1e1b0acc0f4d72",
+    "21c5d85f60f695dac09ea96b3f8ae12ba54c4b01",
+)
+
+package() {
+    install -Dm 0755 boot/loader/loader.conf "$pkgdir/boot/loader/loader.conf"
+    install -Dm 0755 boot/loader/arch.conf "$pkgdir/boot/loader/entries/arch.conf"
+    install -Dm 0744 etc/pacman/hooks/systemd-boot.hook "$pkgdir/etc/pacman.d/hooks/100-systemd-boot.hook"
+}
+
+pre_install() {
+    bootctl install
+}
+
+post_upgrade() {
+    bootctl update
+}
