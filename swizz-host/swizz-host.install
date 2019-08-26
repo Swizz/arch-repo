@@ -1,0 +1,12 @@
+pre_install() {
+    ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+    hwclock --systohc
+
+    sed -i '/fr_BE.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
+    sed -i '/fr_FR.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
+    locale-gen
+}
+
+post_install() {
+    mkinitcpio -p linux
+}

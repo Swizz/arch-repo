@@ -15,17 +15,10 @@ sha1sum=(
     "c66ec70047d62933e4bd4a80ec1e1b0acc0f4d72",
     "21c5d85f60f695dac09ea96b3f8ae12ba54c4b01",
 )
+install=swizz-boot.install
 
 package() {
     install -Dm 0755 boot/loader/loader.conf "$pkgdir/boot/loader/loader.conf"
     install -Dm 0755 boot/loader/arch.conf "$pkgdir/boot/loader/entries/arch.conf"
     install -Dm 0744 etc/pacman/hooks/systemd-boot.hook "$pkgdir/etc/pacman.d/hooks/100-systemd-boot.hook"
-}
-
-pre_install() {
-    bootctl install
-}
-
-post_upgrade() {
-    bootctl update
 }

@@ -21,23 +21,11 @@ sha1sum=(
     "17ca21f96440f715ec72f08837551c92e845a2ec",
     "fa7a88379e7269b369bbdd8af91a62b36dc5df56",
 )
+install=swizz-host.install
 
 package() {
     install -Dm 0644 etc/hostname "$pkgdir/etc/hostname"
     install -Dm 0644 etc/hosts "$pkgdir/etc/hosts"
     install -Dm 0644 etc/locale.conf "$pkgdir/etc/locale.conf"
     install -Dm 0644 etc/vconsole.conf "$pkgdir/etc/vconsole.conf"
-}
-
-pre_install() {
-    ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-    hwclock --systohc
-
-    sed -i '/fr_BE.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
-    sed -i '/fr_FR.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
-    locale-gen
-}
-
-post_install() {
-    mkinitcpio -p linux
 }

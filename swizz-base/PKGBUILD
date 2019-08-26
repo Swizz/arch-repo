@@ -28,19 +28,10 @@ sha1sum=(
     "4b9bc9173ebbf92c795fb901b8343e0b8f11253f",
     "e1a19e42c290a658535532914a263bf7565b0ce1",
 )
+install=swizz-base.install
 
 package() {
     install -Dm 0640 etc/sudoers "$pkgdir/etc/sudoers.d/sudoers"
     install -Dm 0644 etc/zsh/zshenv "$pkgdir/etc/zsh/zshenv"
     install -Dm 0644 etc/zsh/zshrc "$pkgdir/etc/zsh/zshrc"
-}
-
-post_install() {
-    systemctl enable --now NetworkManager
-    systemctl enable --now ntpd
-
-    usermod -groups sudo swizz
-    usermod --shell /sbin/nologin root
-
-    usermod --shell /bin/zsh swizz
 }

@@ -1,0 +1,7 @@
+pre_install() {
+    bootctl install
+}
+
+post_upgrade() {
+    bootctl update
+}
