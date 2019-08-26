@@ -9,4 +9,13 @@ pre_install() {
 
 post_install() {
     mkinitcpio -p linux
+
+    post_upgrade
+}
+
+post_upgrade() {
+    cp etc/hosts etc/hosts.pacsave
+    cp etc/locale.conf etc/locale.conf.pacsave
+    mv etc/hosts.pacnew etc/hosts
+    mv etc/locale.conf.pacnew etc/locale.conf
 }

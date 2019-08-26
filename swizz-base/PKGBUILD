@@ -6,32 +6,32 @@ arch=("any")
 url="https://github.com/swizz/arch-repo"
 license=("ISC")
 depends=(
-    "swizz-host",
-    "swizz-boot",
+    "swizz-host"
+    "swizz-boot"
 
-    "git",
-    "networkmanager",
-    "ntp",
-    "pacaur",
-    "sudo",
-    "vim",
-    "zsh",
-    "zsh-pure-prompt",
+    "git"
+    "networkmanager"
+    "ntp"
+    "pacaur"
+    "sudo"
+    "vim"
+    "zsh"
+    "zsh-pure-prompt"
 )
-sources=(
-    "etc/sudoers",
-    "etc/zsh/zshenv",
-    "etc/zsh/zshrc",
+source=(
+    "sudoers"
+    "zsh/zshenv"
+    "zsh/zshrc"
 )
-sha1sum=(
-    "15abb9aa4b530ab413f03fee2de45db4f1d840e1",
-    "4b9bc9173ebbf92c795fb901b8343e0b8f11253f",
-    "e1a19e42c290a658535532914a263bf7565b0ce1",
+md5sums=(
+    "cc8a53a10e85ca3fea4fe2c3469cf672"
+    "8e9d111432715818fc566fa2deb4a68f"
+    "58505c643c566730cc80eed5e50b0b32"
 )
 install=swizz-base.install
 
 package() {
-    install -Dm 0640 etc/sudoers "$pkgdir/etc/sudoers.d/sudoers"
-    install -Dm 0644 etc/zsh/zshenv "$pkgdir/etc/zsh/zshenv"
-    install -Dm 0644 etc/zsh/zshrc "$pkgdir/etc/zsh/zshrc"
+    install -Dm 0640 sudoers "$pkgdir/etc/sudoers.d/sudoers"
+    install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"
+    install -Dm 0644 zshrc "$pkgdir/etc/zsh/zshrc"
 }

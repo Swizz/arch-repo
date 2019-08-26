@@ -5,20 +5,20 @@ pkgdesc="Bootable system configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
 license=("ISC")
-sources=(
-    "boot/loader/arch.conf",
-    "boot/loader/loader.conf",
-    "etc/pacman/hooks/systemd-boot.hook",
+source=(
+    "arch.conf"
+    "loader.conf"
+    "systemd-boot.hook"
 )
-sha1sum=(
-    "38a4c9042498bc8d9c9fc2740400718657a0f13f",
-    "c66ec70047d62933e4bd4a80ec1e1b0acc0f4d72",
-    "21c5d85f60f695dac09ea96b3f8ae12ba54c4b01",
+md5sums=(
+    "74bc3301a352234a10d353b4014413c7"
+    "910fd3580b3c7bd92b1142f27687f835"
+    "bdd9fc7d35bc51348ac05f65d1f813cf"
 )
 install=swizz-boot.install
 
 package() {
-    install -Dm 0755 boot/loader/loader.conf "$pkgdir/boot/loader/loader.conf"
-    install -Dm 0755 boot/loader/arch.conf "$pkgdir/boot/loader/entries/arch.conf"
-    install -Dm 0744 etc/pacman/hooks/systemd-boot.hook "$pkgdir/etc/pacman.d/hooks/100-systemd-boot.hook"
+    install -Dm 0755 loader.conf "$pkgdir/boot/loader/loader.conf"
+    install -Dm 0755 arch.conf "$pkgdir/boot/loader/entries/arch.conf"
+    install -Dm 0744 systemd-boot.hook "$pkgdir/etc/pacman.d/hooks/100-systemd-boot.hook"
 }
