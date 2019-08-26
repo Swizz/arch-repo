@@ -1,15 +1,46 @@
 pkgname=swizz-base
-pkgver=0.0.1
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
 license=("ISC")
 depends=(
+    "swizz-host",
+    "swizz-boot",
+
     "git",
     "networkmanager",
     "ntp",
     "pacaur",
+    "sudo",
     "vim",
     "zsh",
+    "zsh-pure-prompt",
 )
+sources=(
+    "etc/sudoers",
+    "etc/zsh/zshenv",
+    "etc/zsh/zshrc",
+)
+sha1sum=(
+    "15abb9aa4b530ab413f03fee2de45db4f1d840e1",
+    "4b9bc9173ebbf92c795fb901b8343e0b8f11253f",
+    "e1a19e42c290a658535532914a263bf7565b0ce1",
+)
+
+package() {
+    install -Dm 0640 etc/sudoers "$pkgdir/etc/sudoers.d/sudoers"
+    install -Dm 0644 etc/zsh/zshenv "$pkgdir/etc/zsh/zshenv"
+    install -Dm 0644 etc/zsh/zshrc "$pkgdir/etc/zsh/zshrc"
+}
+
+post_install() {
+    systemctl enable --now NetworkManager
+    systemctl enable --now ntpd
+
+    usermod -groups sudo swizz
+    usermod --shell /sbin/nologin root
+
+    usermod --shell /bin/zsh swizz
+}
