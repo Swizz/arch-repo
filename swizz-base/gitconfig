@@ -1,0 +1,7 @@
+[user]
+  name = Swizz
+	email = Swizz@users.noreply.github.com
+[credential]
+	helper = cache
+[core]
+	editor = vim
