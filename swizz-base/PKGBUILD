@@ -1,9 +1,10 @@
 pkgname=swizz-base
-pkgver=0.2.0
+pkgver=0.3.0
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
+groups=("swizz")
 license=("ISC")
 depends=(
     "swizz-host"
@@ -19,7 +20,7 @@ depends=(
     "zsh-pure-prompt"
 )
 source=(
-    "pacman.conf"
+    "pacman.conf.patch"
     "gitconfig"
     "sudoers"
     "zsh/zshenv"
@@ -29,7 +30,7 @@ backup=(
     "etc/pacman.conf"
 )
 md5sums=(
-    "853b4e84b9cfba859cdaa85c0d3c18cb"
+    "dd9a9a1de2c9c44290610a11a942db5e"
     "603cd6293512e0fb162cf72388d010e5"
     "cc8a53a10e85ca3fea4fe2c3469cf672"
     "8e9d111432715818fc566fa2deb4a68f"
@@ -38,7 +39,8 @@ md5sums=(
 install=swizz-base.install
 
 package() {
-    install -Dm 0644 pacman.conf "$pkgdir/etc/pacman.conf"
+    patch -Nfp0 -i pacman.conf.patch
+
     install -Dm 0644 gitconfig "$pkgdir/etc/gitconfig"
     install -Dm 0640 sudoers "$pkgdir/etc/sudoers.d/sudoers"
     install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"

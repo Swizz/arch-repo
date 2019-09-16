@@ -1,6 +1,5 @@
 post_install() {
     systemctl enable --now NetworkManager
-    systemctl enable --now ntpd
 
     usermod -groups sudo swizz
     usermod --shell /sbin/nologin root

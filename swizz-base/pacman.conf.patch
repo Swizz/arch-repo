@@ -1,0 +1,24 @@
+--- /etc/pacman.conf	2019-09-06 16:08:32.303524534 +0200
++++ /etc/pacman.conf	2019-09-06 16:09:42.206871893 +0200
+@@ -31,10 +31,11 @@
+
+ # Misc options
+ #UseSyslog
+-#Color
+-#TotalDownload
++Color
++TotalDownload
+ CheckSpace
+ #VerbosePkgLists
++ILoveCandy
+
+ # By default, pacman accepts packages signed by keys that its local keyring
+ # trusts (see pacman-key and its man page), as well as unsigned packages.
+@@ -98,3 +99,7 @@
+ #[custom]
+ #SigLevel = Optional TrustAll
+ #Server = file:///home/custompkgs
++
++[swizz]
++SigLevel = Optional TrustAll
++Server = https://raw.githubusercontent.com/swizz/arch-repo/x86_64
