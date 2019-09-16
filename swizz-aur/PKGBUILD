@@ -1,0 +1,11 @@
+pkgname=swizz-aur
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Aur management system configuration for Swizz systems"
+arch=("any")
+url="https://github.com/swizz/arch-repo"
+license=("ISC")
+depends=(
+    "aurutils"
+    "pacman-contrib"
+)
