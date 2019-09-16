@@ -1,6 +1,8 @@
 pre_install() {
     ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
     hwclock --systohc
+
+    timedatectl set-ntp true
 }
 
 post_install() {

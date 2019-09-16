@@ -1,15 +1,17 @@
 pkgname=swizz-host
-pkgver=0.1.2
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="System source configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
+groups=("swizz")
 license=("ISC")
 source=(
     "hostname"
     "hosts"
     "locale.conf"
     "locale.gen"
+    "timesyncd.conf"
     "vconsole.conf"
 )
 backup=(
@@ -30,5 +32,6 @@ package() {
     install -Dm644 hosts "$pkgdir/etc/hosts.pacnew"
     install -Dm644 locale.conf "$pkgdir/etc/locale.conf.pacnew"
     install -Dm644 locale.gen "$pkgdir/etc/locale.gen.pacnew"
+    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf"
     install -Dm644 vconsole.conf "$pkgdir/etc/vconsole.conf"
 }
