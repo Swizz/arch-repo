@@ -1,10 +1,6 @@
 pre_install() {
     ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
     hwclock --systohc
-
-    sed -i '/fr_BE.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
-    sed -i '/fr_FR.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
-    locale-gen
 }
 
 post_install() {
@@ -16,6 +12,10 @@ post_install() {
 post_upgrade() {
     cp etc/hosts etc/hosts.pacsave
     cp etc/locale.conf etc/locale.conf.pacsave
+    cp etc/locale.gen etc/locale.gen.pacsave
     mv etc/hosts.pacnew etc/hosts
     mv etc/locale.conf.pacnew etc/locale.conf
+    mv etc/locale.gen.pacnew etc/locale.gen
+
+    locale-gen
 }
