@@ -1,0 +1,48 @@
+pkgname=swizz-dekstop
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Desktop system configuration for Swizz systems"
+arch=("any")
+url="https://github.com/swizz/arch-repo"
+groups=("swizz")
+license=("ISC")
+depends=(
+  "swizz-base"
+
+  "bluez"
+  "bluez-utils"
+  "code"
+  "deepin-calculator"
+  "deepin-calendar"
+  "deepin-clone"
+  "deepin-editor"
+  "deepin-image-viewer"
+  "deepin-music"
+  "deepin-picker"
+  "deepin-screen-recorder"
+  "deepin-screenshot"
+  "deepin-session-ui"
+  "deepin-system-monitor"
+  "deepin-voice-recorder"
+  "gvfs-mtp"
+  "noto-fonts"
+  "noto-fonts-emoji"
+  "playerctl"
+  "ttf-fira-code"
+  "ttf-fira-mono"
+  "ttf-fira-sans"
+  "vivaldi-snapshot"
+  # "vivaldi-snapshot-ffmpeg-codecs"
+  # "vivaldi-widevine"
+)
+# source=(
+
+# )
+# md5sums=(
+
+# )
+install=swizz-desktop.install
+
+# package() {
+
+# }
