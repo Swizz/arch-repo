@@ -5,4 +5,11 @@ post_install() {
     usermod --shell /sbin/nologin root
 
     usermod --shell /bin/zsh swizz
+
+    post_upgrade
+}
+
+
+post_upgrade() {
+    patch -Np1 -d / /etc/pacman.conf.patch
 }

@@ -12,7 +12,6 @@ depends=(
 
     "git"
     "networkmanager"
-    "ntp"
     "pacaur"
     "sudo"
     "vim"
@@ -39,8 +38,7 @@ md5sums=(
 install=swizz-base.install
 
 package() {
-    patch -Nfp0 -i pacman.conf.patch
-
+    install -Dm 0644 pacman.conf.patch "$pkgdir/etc/pacman.conf.patch"
     install -Dm 0644 gitconfig "$pkgdir/etc/gitconfig"
     install -Dm 0640 sudoers "$pkgdir/etc/sudoers.d/sudoers"
     install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"
