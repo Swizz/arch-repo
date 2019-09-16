@@ -1,9 +1,10 @@
 pkgname=swizz-boot
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Bootable system configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
+groups=("swizz")
 license=("ISC")
 source=(
     "arch.conf"

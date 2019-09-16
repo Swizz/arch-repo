@@ -1,9 +1,10 @@
 pkgname=swizz-aur
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Aur management system configuration for Swizz systems"
 arch=("any")
 url="https://github.com/swizz/arch-repo"
+groups=("swizz-extra")
 license=("ISC")
 depends=(
     "aurutils"
