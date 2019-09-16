@@ -12,12 +12,16 @@ post_install() {
 }
 
 post_upgrade() {
-    cp etc/hosts etc/hosts.pacsave
-    cp etc/locale.conf etc/locale.conf.pacsave
-    cp etc/locale.gen etc/locale.gen.pacsave
-    mv etc/hosts.pacnew etc/hosts
-    mv etc/locale.conf.pacnew etc/locale.conf
-    mv etc/locale.gen.pacnew etc/locale.gen
+    cp /etc/hosts /etc/hosts.pacsave
+    cp /etc/locale.conf /etc/locale.conf.pacsave
+    cp /etc/locale.gen /etc/locale.gen.pacsave
+    cp /etc/systemd/timesyncd.conf /etc/systemd/timesyncd.conf.pacsave
+    mv /etc/hosts.pacnew /etc/hosts
+    mv /etc/locale.conf.pacnew /etc/locale.conf
+    mv /etc/locale.gen.pacnew /etc/locale.gen
+    mv /etc/systemd/timesyncd.conf.pacnew /etc/systemd/timesyncd.conf
 
     locale-gen
 }
+
+

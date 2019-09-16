@@ -1,5 +1,5 @@
 pkgname=swizz-host
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="System source configuration for Swizz systems"
 arch=("any")
@@ -23,6 +23,7 @@ md5sums=(
     "319cd8666414021420e7d7def42f4cfe"
     "c8a16ef12d809324f4e926e002ef308c"
     "c973c5d5162026d2ce1e8ceba275b1d8"
+    "64405f62e8d9591a401fdbf47b27de28"
     "49a862d5b491bc6f421ca0864b906863"
 )
 install=swizz-host.install
@@ -32,6 +33,6 @@ package() {
     install -Dm644 hosts "$pkgdir/etc/hosts.pacnew"
     install -Dm644 locale.conf "$pkgdir/etc/locale.conf.pacnew"
     install -Dm644 locale.gen "$pkgdir/etc/locale.gen.pacnew"
-    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf"
+    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf.pacnew"
     install -Dm644 vconsole.conf "$pkgdir/etc/vconsole.conf"
 }
