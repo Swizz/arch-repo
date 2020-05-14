@@ -9,42 +9,21 @@ license=("ISC")
 depends=(
   "swizz-base"
 
-  "bluez"
-  "bluez-utils"
-  "code"
-  "deepin-calculator"
-  "deepin-calendar"
-  "deepin-clone"
-  "deepin-editor"
-  "deepin-image-viewer"
-  "deepin-music"
-  "deepin-picker"
-  "deepin-screen-recorder"
-  "deepin-screenshot"
   "deepin-session-ui"
-  "deepin-system-monitor"
   "deepin-terminal"
-  "deepin-voice-recorder"
-  "gvfs-mtp"
-  "noto-fonts"
-  "noto-fonts-emoji"
-  "playerctl"
-  "ttf-fira-code"
-  "ttf-fira-mono"
-  "ttf-fira-sans"
-  "vivaldi-snapshot"
-  "vivaldi-snapshot-ffmpeg-codecs"
-  "vivaldi-widevine"
 )
-# source=(
-
-# )
-# md5sums=(
-
-# )
+source=(
+  "lightdm.conf.patch"
+)
+backup=(
+    "etc/lightdm.conf"
+)
+md5sums=(
+  "08c050a796b6786d899d4b3965103130"
+)
 install=swizz-desktop.install
 
-# package() {
-  "/etc/lightdm.conf"
-  "/usr/share/deepin-terminal/theme/vscode"
-# }
+package() {
+  install -Dm 0644 lightdm.conf.patch "$pkgdir/etc/lightdm.conf.patch"
+  #"/usr/share/deepin-terminal/theme/vscode"
+}

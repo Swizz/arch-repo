@@ -1,4 +1,10 @@
 post_install() {
   systemctl enable --now bluetooth
   systemctl enable --now lightdm
+
+  post_upgrade
+}
+
+post_upgrade() {
+    patch -Np1 -d / /etc/lightdm.conf.patch
 }
