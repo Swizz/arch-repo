@@ -1,0 +1,19 @@
+pkgname=swizz-base-devel
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Base-devel system configuration for Swizz systems"
+arch=("any")
+url="https://github.com/swizz/arch-repo"
+groups=("swizz")
+license=("ISC")
+depends=(
+    "git"
+    "man-db"
+    "man-pages"
+    "patch"
+    "pkgconf"
+    "sed"
+    "texinfo"
+    "vim"
+    "which"
+)

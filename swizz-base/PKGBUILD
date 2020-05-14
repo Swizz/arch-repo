@@ -1,5 +1,5 @@
 pkgname=swizz-base
-pkgver=0.3.1
+pkgver=0.4.0
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
@@ -8,15 +8,15 @@ groups=("swizz")
 license=("ISC")
 depends=(
     "swizz-host"
+    "swizz-base-devel"
     "swizz-boot"
 
     "git"
     "networkmanager"
     "pacaur"
     "sudo"
-    "vim"
     "zsh"
-    #"zsh-pure-prompt"
+    "zsh-pure-prompt"
 )
 source=(
     "pacman.conf.patch"
