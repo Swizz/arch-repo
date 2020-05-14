@@ -1,5 +1,5 @@
 pkgname=swizz-base-devel
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Base-devel system configuration for Swizz systems"
 arch=("any")
@@ -7,6 +7,7 @@ url="https://github.com/swizz/arch-repo"
 groups=("swizz")
 license=("ISC")
 depends=(
+    "btrfs-progs"
     "git"
     "man-db"
     "man-pages"
