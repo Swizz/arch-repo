@@ -1,5 +1,5 @@
 pkgname=swizz-base
-pkgver=0.3.0
+pkgver=0.3.1
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
@@ -29,7 +29,7 @@ backup=(
     "etc/pacman.conf"
 )
 md5sums=(
-    "dd9a9a1de2c9c44290610a11a942db5e"
+    "d7de3134e88af3385bdda814ce752934"
     "603cd6293512e0fb162cf72388d010e5"
     "cc8a53a10e85ca3fea4fe2c3469cf672"
     "8e9d111432715818fc566fa2deb4a68f"
