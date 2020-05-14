@@ -1,9 +1,10 @@
 post_install() {
     systemctl enable --now NetworkManager
 
-    usermod -groups sudo swizz
-    usermod --shell /sbin/nologin root
+    groupadd sudo
+    usermod --groups sudo swizz
 
+    usermod --shell /sbin/nologin root
     usermod --shell /bin/zsh swizz
 
     post_upgrade

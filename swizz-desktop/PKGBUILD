@@ -23,6 +23,7 @@ depends=(
   "deepin-screenshot"
   "deepin-session-ui"
   "deepin-system-monitor"
+  "deepin-terminal"
   "deepin-voice-recorder"
   "gvfs-mtp"
   "noto-fonts"
@@ -32,8 +33,8 @@ depends=(
   "ttf-fira-mono"
   "ttf-fira-sans"
   "vivaldi-snapshot"
-  # "vivaldi-snapshot-ffmpeg-codecs"
-  # "vivaldi-widevine"
+  "vivaldi-snapshot-ffmpeg-codecs"
+  "vivaldi-widevine"
 )
 # source=(
 
@@ -44,5 +45,6 @@ depends=(
 install=swizz-desktop.install
 
 # package() {
-
+  "/etc/lightdm.conf"
+  "/usr/share/deepin-terminal/theme/vscode"
 # }

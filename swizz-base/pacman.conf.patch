@@ -21,4 +21,4 @@
 +
 +[swizz]
 +SigLevel = Optional TrustAll
-+Server = https://raw.githubusercontent.com/swizz/arch-repo/x86_64
++Server = https://github.com/Swizz/arch-repo/raw/x86_64
