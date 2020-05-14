@@ -16,10 +16,10 @@ post_upgrade() {
     cp /etc/locale.conf /etc/locale.conf.pacsave
     cp /etc/locale.gen /etc/locale.gen.pacsave
     cp /etc/systemd/timesyncd.conf /etc/systemd/timesyncd.conf.pacsave
-    mv /etc/hosts.pacnew /etc/hosts
-    mv /etc/locale.conf.pacnew /etc/locale.conf
-    mv /etc/locale.gen.pacnew /etc/locale.gen
-    mv /etc/systemd/timesyncd.conf.pacnew /etc/systemd/timesyncd.conf
+    mv /etc/hosts.pacnew.install /etc/hosts
+    mv /etc/locale.conf.pacnew.install /etc/locale.conf
+    mv /etc/locale.gen.pacnew.install /etc/locale.gen
+    mv /etc/systemd/timesyncd.conf.pacnew.install /etc/systemd/timesyncd.conf
 
     locale-gen
 }

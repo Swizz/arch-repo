@@ -16,7 +16,7 @@ depends=(
     "sudo"
     "vim"
     "zsh"
-    "zsh-pure-prompt"
+    #"zsh-pure-prompt"
 )
 source=(
     "pacman.conf.patch"

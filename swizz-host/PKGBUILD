@@ -30,9 +30,9 @@ install=swizz-host.install
 
 package() {
     install -Dm644 hostname "$pkgdir/etc/hostname"
-    install -Dm644 hosts "$pkgdir/etc/hosts.pacnew"
-    install -Dm644 locale.conf "$pkgdir/etc/locale.conf.pacnew"
-    install -Dm644 locale.gen "$pkgdir/etc/locale.gen.pacnew"
-    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf.pacnew"
+    install -Dm644 hosts "$pkgdir/etc/hosts.pacnew.install"
+    install -Dm644 locale.conf "$pkgdir/etc/locale.conf.pacnew.install"
+    install -Dm644 locale.gen "$pkgdir/etc/locale.gen.pacnew.install"
+    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf.pacnew.install"
     install -Dm644 vconsole.conf "$pkgdir/etc/vconsole.conf"
 }
