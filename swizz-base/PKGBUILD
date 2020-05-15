@@ -18,18 +18,18 @@ depends=(
     "zsh"
     "zsh-pure-prompt"
 )
+makedepends=(
+    "reflector"
+)
 source=(
-    "pacman.conf.patch"
+    "pacman.conf"
     "gitconfig"
     "sudoers"
     "zsh/zshenv"
     "zsh/zshrc"
 )
-backup=(
-    "etc/pacman.conf"
-)
 md5sums=(
-    "d7de3134e88af3385bdda814ce752934"
+    "84ce904068c30c6011af1bec6ef2e4db"
     "603cd6293512e0fb162cf72388d010e5"
     "cc8a53a10e85ca3fea4fe2c3469cf672"
     "8e9d111432715818fc566fa2deb4a68f"
@@ -38,7 +38,7 @@ md5sums=(
 install=swizz-base.install
 
 package() {
-    install -Dm 0644 pacman.conf.patch "$pkgdir/etc/pacman.conf.patch"
+    install -Dm 0644 pacman.conf "$pkgdir/etc/pacman.conf"
     install -Dm 0644 gitconfig "$pkgdir/etc/gitconfig"
     install -Dm 0640 sudoers "$pkgdir/etc/sudoers.d/sudoers"
     install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"
