@@ -29,10 +29,10 @@ md5sums=(
 install=swizz-host.install
 
 package() {
-    install -Dm644 hostname "$pkgdir/etc/hostname"
-    install -Dm644 hosts "$pkgdir/etc/hosts.pacnew.install"
-    install -Dm644 locale.conf "$pkgdir/etc/locale.conf.pacnew.install"
-    install -Dm644 locale.gen "$pkgdir/etc/locale.gen.pacnew.install"
-    install -Dm644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf.pacnew.install"
-    install -Dm644 vconsole.conf "$pkgdir/etc/vconsole.conf"
+    install -Dm 0644 hostname "$pkgdir/etc/hostname"
+    install -Dm 0644 hosts "$pkgdir/etc/hosts.pacnew.install"
+    install -Dm 0644 locale.conf "$pkgdir/etc/locale.conf.pacnew.install"
+    install -Dm 0644 locale.gen "$pkgdir/etc/locale.gen.pacnew.install"
+    install -Dm 0644 timesyncd.conf "$pkgdir/etc/systemd/timesyncd.conf.pacnew.install"
+    install -Dm 0644 vconsole.conf "$pkgdir/etc/vconsole.conf"
 }

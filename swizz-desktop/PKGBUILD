@@ -1,4 +1,4 @@
-pkgname=swizz-dekstop
+pkgname=swizz-desktop
 pkgver=0.1.0
 pkgrel=1
 pkgdesc="Desktop system configuration for Swizz systems"

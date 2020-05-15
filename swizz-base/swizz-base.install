@@ -7,5 +7,12 @@ post_install() {
     usermod --shell /sbin/nologin root
     usermod --shell /bin/zsh swizz
 
+    post_upgrade
+}
+
+post_upgrade() {
+    cp /etc/pacman.conf /etc/pacman.conf.pacsave
+    mv /etc/pacman.conf.pacnew.install /etc/pacman.conf
+
     reflector -l 200 --fastest 10 --sort rate --save /etc/pacman.d/mirrorlist
 }
