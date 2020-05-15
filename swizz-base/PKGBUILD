@@ -1,5 +1,5 @@
 pkgname=swizz-base
-pkgver=0.6.1
+pkgver=0.6.2
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
@@ -40,7 +40,7 @@ install=swizz-base.install
 package() {
     install -Dm 0644 pacman.conf "$pkgdir/etc/pacman.conf.pacnew.install"
     install -Dm 0644 gitconfig "$pkgdir/etc/gitconfig"
-    install -Dm 0640 sudoers "$pkgdir/etc/sudoers"
+    install -Dm 0640 sudoers "$pkgdir/etc/sudoers.pacnew.install"
     install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"
     install -Dm 0644 zshrc "$pkgdir/etc/zsh/zshrc"
 }

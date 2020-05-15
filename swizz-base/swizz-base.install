@@ -12,7 +12,10 @@ post_install() {
 
 post_upgrade() {
     cp /etc/pacman.conf /etc/pacman.conf.pacsave
+    cp /etc/sudoers /etc/sudoers.pacsave
     mv /etc/pacman.conf.pacnew.install /etc/pacman.conf
+    mv /etc/sudoers.pacnew.install /etc/sudoers
 
     reflector -l 200 --fastest 10 --sort rate --save /etc/pacman.d/mirrorlist
 }
+
