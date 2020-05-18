@@ -13,17 +13,14 @@ depends=(
   "deepin-terminal"
 )
 source=(
-  "lightdm.conf.patch"
-)
-backup=(
-    "etc/lightdm.conf"
+  "lightdm.conf"
 )
 md5sums=(
-  "08c050a796b6786d899d4b3965103130"
+  "2af53da5c351dcc3bbe566a340f7d836"
 )
 install=swizz-desktop.install
 
 package() {
-  install -Dm 0644 lightdm.conf.patch "$pkgdir/etc/lightdm.conf.patch"
+  install -Dm 0644 lightdm.conf "$pkgdir/etc/lightdm.conf.pacnew.install"
   #"/usr/share/deepin-terminal/theme/vscode"
 }
