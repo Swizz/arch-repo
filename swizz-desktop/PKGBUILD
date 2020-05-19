@@ -1,5 +1,5 @@
 pkgname=swizz-desktop
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Desktop system configuration for Swizz systems"
 arch=("any")
@@ -21,6 +21,6 @@ md5sums=(
 install=swizz-desktop.install
 
 package() {
-  install -Dm 0644 lightdm.conf "$pkgdir/etc/lightdm.conf.pacnew.install"
+  install -Dm 0644 lightdm.conf "$pkgdir/etc/lightdm/lightdm.conf.pacnew.install"
   #"/usr/share/deepin-terminal/theme/vscode"
 }

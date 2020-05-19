@@ -6,6 +6,6 @@ post_install() {
 }
 
 post_upgrade() {
-    cp /etc/lightdm.conf /etc/lightdm.conf.pacsave
-    mv /etc/lightdm.conf.pacnew.install /etc/lightdm.conf
+    cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.pacsave
+    mv /etc/lightdm/lightdm.conf.pacnew.install /etc/lightdm/lightdm.conf
 }
