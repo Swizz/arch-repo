@@ -11,16 +11,23 @@ depends=(
 
   "deepin-session-ui"
   "deepin-terminal"
+  "ttf-fira-code"
+  "visual-studio-code-bin"
 )
 source=(
   "lightdm.conf"
+  "settings.json"
+  "keybindings.json"
 )
 md5sums=(
   "2af53da5c351dcc3bbe566a340f7d836"
+  "7a4538bc7d3e5a2be925b2c88929c0d5"
+  "0bc3533fbf40baba0973fb13e2cd6cc2"
 )
 install=swizz-desktop.install
 
 package() {
   install -Dm 0644 lightdm.conf "$pkgdir/etc/lightdm/lightdm.conf.pacnew.install"
-  #"/usr/share/deepin-terminal/theme/vscode"
+  install -Dm 0744 settings.json "$pkgdir/opt/visual-studio-code/default-config/settings.json"
+  install -Dm 0744 keybindings.json "$pkgdir/opt/visual-studio-code/default-config/keybindings.json"
 }

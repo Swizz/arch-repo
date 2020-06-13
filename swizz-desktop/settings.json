@@ -1,0 +1,87 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "maximized",
+    "window.zoomLevel": -0.1,
+    "material-icon-theme.showUpdateMessage": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.rulers": [80],
+    "scm.defaultViewMode": "tree",
+    "editor.renderIndentGuides": false,
+    "breadcrumbs.enabled": true,
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "editor.dragAndDrop": false,
+    "window.restoreWindows": "none",
+    "workbench.editor.restoreViewState": false,
+    "diffEditor.renderSideBySide": true,
+    "bracket-pair-colorizer-2.colors": [
+        "Gold",
+        "LightSkyBlue",
+        "Plum",
+        "Azure",
+        "Salmon"
+    ],
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
+    "bracket-pair-colorizer-2.showBracketsInRuler": true,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+    "bracket-pair-colorizer-2.unmatchedScopeColor": "Crimson",
+
+    "editor.multiCursorModifier": "alt",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "search.useIgnoreFiles": false,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.tabSize": 2,
+    "files.defaultLanguage": "markdown",
+    "workbench.startupEditor": "newUntitledFile",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.external.linuxExec": "deepin-terminal",
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/__pycache__": true
+    },
+
+    "prettier.requireConfig": true,
+    "prettier.disableLanguages": [],
+
+    "python.linting.flake8Enabled": true,
+    "python.venvFolders": [".virtualenvs"],
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [120]
+    },
+    "python.formatting.provider": "none",
+    "python.formatting.blackArgs": ["--line-length", "120"],
+    "python.jediEnabled": false,
+    "python.linting.pylintEnabled": false,
+    "yaml.format.singleQuote": true,
+
+    "files.associations": {
+        "*.jsdoc": "javascript"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "vetur.format.defaultFormatter.html": "prettier",
+    "eslint.validate": ["javascript", "vue"]
+}
