@@ -12,3 +12,8 @@ aur sync -d swizz -cR <package>
 ```sh
 aur sync -d swizz -u
 ```
+
+## Commit repo changes
+```sh
+git commit -m "$(date +'%Y-%m-%d %H:%M:%D')"
+```
