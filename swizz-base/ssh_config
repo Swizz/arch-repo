@@ -1,0 +1,10 @@
+Host github.com
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+	IdentityFile /etc/ssh/github
+
+Host gitlab.com
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+	IdentityFile /etc/ssh/gitlab
+

@@ -1,5 +1,5 @@
 pkgname=swizz-base
-pkgver=0.6.3
+pkgver=0.7.0
 pkgrel=1
 pkgdesc="Base system configuration for Swizz systems"
 arch=("any")
@@ -23,6 +23,7 @@ source=(
     "pacman.conf"
     "gitconfig"
     "sudoers"
+    "ssh_config"
     "zshenv"
     "zshrc"
 )
@@ -30,6 +31,7 @@ md5sums=(
     "84ce904068c30c6011af1bec6ef2e4db"
     "603cd6293512e0fb162cf72388d010e5"
     "cc8a53a10e85ca3fea4fe2c3469cf672"
+    "bec2fd21faeb848d731158c0429d3ca4"
     "8e9d111432715818fc566fa2deb4a68f"
     "58505c643c566730cc80eed5e50b0b32"
 )
@@ -39,6 +41,7 @@ package() {
     install -Dm 0644 pacman.conf "$pkgdir/etc/pacman.conf.pacnew.install"
     install -Dm 0644 gitconfig "$pkgdir/etc/gitconfig"
     install -Dm 0640 sudoers "$pkgdir/etc/sudoers.pacnew.install"
+    install -Dm 0640 ssh_config "$pkgdir/etc/ssh/ssh_config.pacnew.install"
     install -Dm 0644 zshenv "$pkgdir/etc/zsh/zshenv"
     install -Dm 0644 zshrc "$pkgdir/etc/zsh/zshrc"
 }
