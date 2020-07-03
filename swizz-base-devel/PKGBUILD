@@ -1,5 +1,5 @@
 pkgname=swizz-base-devel
-pkgver=0.3.0
+pkgver=0.3.2
 pkgrel=1
 pkgdesc="Base-devel system configuration for Swizz systems"
 arch=("any")
@@ -10,7 +10,9 @@ depends=(
     "binutils"
     "btrfs-progs"
     "fakeroot"
+    "gcc"
     "git"
+    "make"
     "man-db"
     "man-pages"
     "patch"
