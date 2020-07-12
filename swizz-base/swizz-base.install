@@ -13,8 +13,10 @@ post_install() {
 post_upgrade() {
     cp /etc/pacman.conf /etc/pacman.conf.pacsave
     cp /etc/sudoers /etc/sudoers.pacsave
+    cp /etc/ssh_config /etc/ssh/ssh_config.pacsave
     mv /etc/pacman.conf.pacnew.install /etc/pacman.conf
     mv /etc/sudoers.pacnew.install /etc/sudoers
+    mv /etc/ssh/ssh_config.pacnew.install /etc/ssh/ssh_config
 
     reflector -l 200 --fastest 10 --sort rate --save /etc/pacman.d/mirrorlist
 }

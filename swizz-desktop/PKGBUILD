@@ -1,5 +1,5 @@
 pkgname=swizz-desktop
-pkgver=0.2.0
+pkgver=0.3.0
 pkgrel=1
 pkgdesc="Desktop system configuration for Swizz systems"
 arch=("any")
@@ -9,10 +9,14 @@ license=("ISC")
 depends=(
   "swizz-base"
 
+  "deepin-screenshot"
   "deepin-session-ui"
   "deepin-terminal"
   "ttf-fira-code"
   "visual-studio-code-bin"
+  "vivaldi-snapshot"
+  "vivaldi-widevine"
+  "xorg-server"
 )
 source=(
   "lightdm.conf"
